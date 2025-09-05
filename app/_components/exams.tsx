@@ -10,7 +10,7 @@ interface Exam {
   calss: string;
 }
 interface Prob {
-  data: Exam;
+  data: Exam[];
 }
 export default function Exampage({ data }: Prob) {
   return (

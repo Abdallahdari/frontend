@@ -1,6 +1,6 @@
 import React from "react";
-import { GetexamsAll } from "../_lib/data";
 import Exampage from "../_components/exams";
+import { GetexamsAll } from "../_lib/data";
 
 export default async function page() {
   const data = await GetexamsAll();
