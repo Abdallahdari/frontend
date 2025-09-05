@@ -25,7 +25,7 @@ export default function ReviewForm() {
         },
       });
       console.log("Review submitted successfully:", res);
-    } catch (error: any) {
+    } catch (error) {
       console.error("Failed to create review:", error);
       toast.error("Something went wrong while submitting your review.");
     }

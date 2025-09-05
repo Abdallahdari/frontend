@@ -1,7 +1,6 @@
 "use server";
 
 import API_BASE_URL from "./axious";
-import { signIn } from "next-auth/react";
 export async function Register(data) {
   try {
     const res = await API_BASE_URL.post("/users", data);
