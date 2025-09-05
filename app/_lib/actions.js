@@ -26,7 +26,7 @@ export async function GetCourses() {
   }
 }
 // login
-export async function signIn(data) {
+export async function Login(data) {
   try {
     const res = await API_BASE_URL.post("/users/login", data);
     if (res.data.token) {

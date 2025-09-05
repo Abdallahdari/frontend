@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { toast, ToastContainer } from "react-toastify";
+import { Login } from "../_lib/actions";
 
 export default function LoginForm() {
   const [formData, setFormData] = useState({
@@ -24,12 +25,7 @@ export default function LoginForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    const res = await signIn("credentials", {
-      redirect: false, // prevent auto-redirect, so we can handle manually
-      email: formData.email,
-      password: formData.password,
-    });
-
+    const res = await Login(formData);
     if (res?.ok) {
       toast.success("✅ Login successful", {
         autoClose: 2000,
